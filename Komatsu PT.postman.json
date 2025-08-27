@@ -1,0 +1,97 @@
+{
+    "info": {
+        "name": "Komatsu PT",
+        "description": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "obtener ruta",
+            "description": "",
+            "event": [],
+            "auth": {},
+            "request": {
+                "auth": {},
+                "method": "GET",
+                "body": {},
+                "header": [],
+                "url": {
+                    "raw": "api/routes/shortest-path",
+                    "path": [
+                        "api",
+                        "routes",
+                        "shortest-path"
+                    ],
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "query": [
+                        {
+                            "key": "start",
+                            "value": "R11",
+                            "description": "",
+                            "type": "string"
+                        },
+                        {
+                            "key": "end",
+                            "value": "CP2",
+                            "description": "",
+                            "type": "string"
+                        }
+                    ],
+                    "variable": []
+                }
+            },
+            "response": [],
+            "protocolProfileBehavior": {
+                "strictSSL": false,
+                "followRedirects": true
+            }
+        },
+        {
+            "name": "Subir rutas",
+            "description": "",
+            "event": [],
+            "auth": {},
+            "request": {
+                "auth": {},
+                "method": "POST",
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "file",
+                            "value": "file://C:\\Users\\Setxh\\IdeaProjects\\pt\\src\\datos.csv",
+                            "type": "file",
+                            "disabled": false
+                        }
+                    ]
+                },
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/routes/upload",
+                    "path": [
+                        "api",
+                        "routes",
+                        "upload"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "protocol": "http",
+                    "port": "8080",
+                    "query": [],
+                    "variable": []
+                }
+            },
+            "response": [],
+            "protocolProfileBehavior": {
+                "strictSSL": false,
+                "followRedirects": true
+            }
+        }
+    ],
+    "variable": [],
+    "event": [],
+    "auth": {}
+}
